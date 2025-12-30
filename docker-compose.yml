@@ -21,7 +21,7 @@ services:
     ports:
       - "9000:9000"
       - "10070:10070"
-    command: ["/bin/bash", "-c", "apt-get update && apt-get install -y curl vim && exec tail -f /dev/null"]
+    command: ["/bin/bash", "-c", "apt-get update && apt-get install -y curl ca-certificates && update-ca-certificates && exec tail -f /dev/null"]
     tty: true
     init: true
     environment:
